@@ -1,0 +1,10 @@
+{
+	"compilerOptions": {
+		"jsx": "react-jsx",
+		"jsxImportSource": "@emotion/react",
+		"strictNullChecks": true,
+		"baseUrl": "src"
+	},
+	"include": ["src/**/*"],
+	"exclude": ["node_modules", "node_modules/**/*"]
+}
