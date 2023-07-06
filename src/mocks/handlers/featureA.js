@@ -1,7 +1,7 @@
 // src/mocks/handlers.js
 import { rest } from 'msw';
 
-export const handlers = [
+export const featureAHandlers = [
 	rest.post('/login', (req, res, ctx) => {
 		// Persist user's authentication in the session
 		sessionStorage.setItem('is-authenticated', 'true');
