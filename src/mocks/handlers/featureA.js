@@ -1,37 +1,19 @@
-// src/mocks/handlers.js
 import { rest } from 'msw';
+import {faker} from '@faker-js/faker/locale/zh_CN';
+
 
 export const featureAHandlers = [
-	rest.post('/login', (req, res, ctx) => {
-		// Persist user's authentication in the session
-		sessionStorage.setItem('is-authenticated', 'true');
-
-		return res(
-			// Respond with a 200 status code
-			ctx.status(200)
-		);
-	}),
-
-	rest.get('/user', (req, res, ctx) => {
-		// Check if the user is authenticated in this session
-		const isAuthenticated = sessionStorage.getItem('is-authenticated');
-
-		if (!isAuthenticated) {
-			// If not authenticated, respond with a 403 error
-			return res(
-				ctx.status(403),
-				ctx.json({
-					errorMessage: 'Not authorized',
-				})
-			);
-		}
-
-		// If authenticated, return a mocked user details
-		return res(
-			ctx.status(200),
-			ctx.json({
-				username: 'admin',
-			})
-		);
-	}),
+	rest.get(`/api/list`, (req, res, ctx) => res(
+      ctx.status(200),
+      ctx.json({
+        code: 0,
+        msg: '请求成功',
+				data: Array(faker.datatype.number(100)).fill({}).map(() => ({
+						imageUrl: faker.image.urlLoremFlickr({ category: 'nature' }),
+						title: faker.lorem.sentence({min: 1, max: 10 }),
+						paragraph: faker.lorem.paragraphs({min: 1, max: 3 }),
+						publishDate: faker.date.anytime()
+					})),
+      })
+    )),
 ];
