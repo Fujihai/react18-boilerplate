@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { request } from "../../../lib/request"
 
 function Container ({children}) {
-	return <div style={{ width: '100vw', backgroundColor: 'hsl(252, 22%, 5%)', color: 'white' }}>{children}</div>
+	return <div style={{ width: '100%', backgroundColor: 'hsl(252, 22%, 5%)', color: 'white' }}>{children}</div>
 }
 
 function Header({children}) {
@@ -19,7 +19,7 @@ function NewsItem ({data}) {
 	}}>
 		<img src={imageUrl} style={{ width: '144px', height: '144px', borderRadius: '8px' }} alt="img"/>
 		<div style={{ padding: '0px 24px' }}>
-			<h2 style={{ textDecoration: 'underline' }}>{title}</h2>
+			<h2 style={{ cursor: 'pointer' }}>{title}</h2>
 			<p>{paragraph}</p>
 		</div>
 	</div>
