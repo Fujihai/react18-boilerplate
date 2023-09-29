@@ -19,6 +19,10 @@ yarn install
 yarn start
 ```
 
+## demo
+
+[demo](./screenshot/demo.png)
+
 ## Documentations
 
 - [file structure](docs/file-structure.md)
