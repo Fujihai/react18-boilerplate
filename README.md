@@ -21,7 +21,7 @@ yarn start
 
 ## demo
 
-![demo-page](screenshot/demo-page.jpg)
+![demo-page](screenshot/demo-page.png)
 
 ## Documentations
 
