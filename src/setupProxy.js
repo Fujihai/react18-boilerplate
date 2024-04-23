@@ -6,12 +6,12 @@ module.exports = function (app) {
     createProxyMiddleware('/api/proxyA', {
       target: 'http://localhost:5000',
       changeOrigin: true,
-      pathRewrite: { '^/api/proxyA': '' }
+      pathRewrite: { '^/api/proxyA': '' },
     }),
     createProxyMiddleware('/api/proxyB', {
       target: 'http://localhost:5001',
       changeOrigin: true,
-      pathRewrite: { '^/api/proxyB': '' }
-    })
-  )
+      pathRewrite: { '^/api/proxyB': '' },
+    }),
+  );
 };

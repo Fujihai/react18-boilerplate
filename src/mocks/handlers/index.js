@@ -1,5 +1,5 @@
-import { featureAHandlers } from "./featureA";
+import { featureAHandlers } from './featureA';
 
 export const handlers = [
-  ...featureAHandlers
-]
+  ...featureAHandlers,
+];

@@ -1,15 +1,15 @@
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
-export function useAuth () {
-  const token = 'xxxxx'
-  const navigate = useNavigate()
+export function useAuth() {
+  const token = 'xxxxx';
+  const navigate = useNavigate();
 
   const redirectLogin = () => {
-    navigate('login')
-  }
+    navigate('login');
+  };
 
   return {
     token,
-    redirectLogin
-  }
+    redirectLogin,
+  };
 }
