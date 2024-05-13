@@ -33,7 +33,7 @@ const rebase = css`
       opacity: 0.4;
     }
   }
-`
+`;
 
 // global layout style
 const layout = css`
@@ -42,7 +42,7 @@ const layout = css`
   #root {
     height: 100%;
   }
-`
+`;
 
 // global theme style
 const theme = css`
@@ -69,8 +69,8 @@ const theme = css`
   ::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.6);
   }
-`
+`;
 
-export function GlobalStyles () {
-  return <Global styles={[rebase, layout, theme]}/>
+export function GlobalStyles() {
+  return <Global styles={[rebase, layout, theme]} />;
 }
