@@ -105,8 +105,6 @@ Prettier 插件配置文件
 
 #### constants
 
-Global constants，include request api url and environment variable.
-
 全局常量，包括请求 API 前缀及环境变量等
 
 #### features
@@ -119,9 +117,7 @@ Global constants，include request api url and environment variable.
 
 #### lib
 
-通用库插件封装，比如请求拦截器封装。
-
-Global request with interceptors configuration.
+通用库插件封装，比如请求拦截器封装
 
 #### mocks
 
